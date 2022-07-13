@@ -1,0 +1,660 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  font-size: 12px;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-bottom: 10px;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links:hover {
+  color: #ffc700;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.nav-links a:active,
+a:visited,
+a:link {
+  text-decoration: none;
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 5px;
+  margin-left: 20px;
+  height: 3vw;
+  min-height: 33px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width: 1093px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 04;
+    height: 70px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .nav-links:hover {
+    color: #ffc700;
+  }
+}
+
+/*Slideshow */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  margin: auto;
+  max-height: 700px;
+  height: 100%;
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.ssimage img {
+  max-height: 700px;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 2vw;
+  padding: 8px 12px;
+  font-weight: bold;
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.quote {
+  margin-top: 8vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-bottom: 8vw;
+  padding: 5vw;
+  font-size: 20px;
+  text-align: center;
+  border: 4px solid #ffc700;
+  font-family: "Shadows Into Light Two", cursive;
+}
+
+.aboutus {
+  background-color: #ffc700;
+  padding: 8vw;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.aboutus h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  margin-bottom: 2vw;
+}
+
+.aboutus p {
+  font-size: 14px;
+}
+
+.aboutus h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.sourcing {
+  background-color: #f7f7f7;
+  padding: 8vw;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  text-align: center;
+}
+
+.sourcingtext {
+  float: left;
+  text-align: center;
+  margin-right: 2vw;
+}
+
+.sourcing h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  margin-bottom: 2vw;
+}
+
+.sourcingtext p {
+  color: #858585;
+  font-size: 14px;
+}
+
+.sourcingimage img {
+  max-width: 100%;
+  margin-top: 3vw;
+}
+
+@media screen and (min-width: 650px) {
+  .sourcing {
+    display: flex;
+    background-color: #f7f7f7;
+  }
+
+  .sourcingimage {
+    float: right;
+  }
+
+  .sourcingimage img {
+    max-width: 30vw;
+  }
+}
+
+.quality {
+  background-color: #f7f7f7;
+  padding: 8vw;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  text-align: center;
+}
+
+.quality h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  margin-bottom: 2vw;
+}
+
+.qualitytext {
+  text-align: center;
+  margin-left: 2vw;
+}
+
+.qualitytext p {
+  color: #858585;
+  font-size: 14px;
+}
+
+.qualityimage img {
+  max-width: 100%;
+  margin-top: 3vw;
+}
+
+@media screen and (min-width: 650px) {
+  .quality {
+    display: flex;
+    background-color: #f7f7f7;
+  }
+
+  .qualityimage {
+    float: left;
+  }
+
+  .qualityimage img {
+    max-width: 30vw;
+  }
+}
+
+.team {
+  background-color: #fff;
+  padding: 8vw;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  text-align: center;
+}
+
+.teamtext {
+  float: left;
+  text-align: center;
+  margin-right: 2vw;
+}
+
+.team h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  margin-bottom: 2vw;
+}
+
+.teamtext p {
+  color: #858585;
+  font-size: 14px;
+}
+
+.teamimage img {
+  max-width: 100%;
+  margin-top: 3vw;
+}
+
+@media screen and (min-width: 650px) {
+  .team {
+    display: flex;
+    background-color: #fff;
+  }
+
+  .teamimage {
+    float: right;
+  }
+
+  .teamimage img {
+    max-width: 30vw;
+  }
+}
+
+.contact {
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  padding: 8vw;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  display: block;
+}
+
+.contact .form h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  margin-bottom: 2vw;
+}
+
+.contact .form .submit {
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  color: #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  border: 1px solid #f5f5f5;
+  margin-bottom: 3vw;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact .form .submit:hover {
+  background-color: #f5f5f5;
+  color: #1c1c1c;
+  font-weight: bold;
+}
+
+.contact .form p {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 2vw;
+}
+
+.contact .footer {
+  float: left;
+  text-align: left;
+  font-size: 12px;
+  margin-left: 0;
+  padding-top: 1vw;
+}
+
+@media screen and (max-width: 550px) {
+  .visitus {
+    font-size: 12px;
+  }
+}
+
+.visitus {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 4vw;
+}
+
+.visitleft {
+  display: inline-block;
+  margin-right: 1vw;
+}
+
+.visitright {
+  display: inline-block;
+  text-align: center;
+  margin-left: 1vw;
+}
+
+.products {
+  padding: 5vw;
+}
+
+.producttext {
+  margin-right: 100px;
+  color: #1c1c1c;
+  margin-bottom: 30px;
+  font-family: "Lato", sans-serif;
+  text-align: left;
+}
+
+.producttext hr {
+  width: 50px;
+  height: 5px;
+  border: 0px;
+  margin-top: 30px;
+  background-color: #1c1c1c;
+  margin-bottom: 30px;
+}
+
+.productimages button img {
+  width: 100%;
+  height: 250px;
+  cursor: pointer;
+}
+
+.productimages button {
+  margin-bottom: 120px;
+  margin-top: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 8vw;
+  background-color: transparent;
+  border: 0px;
+}
+
+@media screen and (min-width: 550px) {
+  .productimages button img {
+    width: 250px;
+    height: 150px;
+    cursor: pointer;
+    float: right;
+    transition: all 0.3s;
+  }
+
+  .productimages button img:hover {
+    opacity: 0.4;
+  }
+
+  .productimages button {
+    margin: 10px 7px;
+    width: 250px;
+    height: 150px;
+    border: 0px;
+    background-color: #000;
+  }
+
+  .productimages {
+    float: right;
+  }
+
+  .producttext {
+    float: left;
+    margin-right: 100px;
+    color: #1c1c1c;
+    margin-bottom: 30px;
+    font-family: "Lato", sans-serif;
+    text-align: left;
+  }
+
+  .products {
+    display: flex;
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+}
+
+.slideshow-img img {
+  width: auto;
+  height: auto;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  z-index: 10000;
+  background-color: #fefefe;
+  margin: 75px auto; /* 15% from the top and centered */
+  height: 85%;
+  padding: 20px;
+  width: 85%; /* Could be more or less, depending on screen size */
+  align-items: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 640px) {
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    z-index: 10000;
+    background-color: #fefefe; /* 15% from the top and centered */
+    padding: 20px;
+    width: 40vw; /* Could be more or less, depending on screen size */
+    height: 90%;
+  }
+
+  .modal img {
+    width: 35vw;
+    height: 35vw;
+  }
+}
+
+#slideshow {
+  position: relative;
+}
+
+.slideshow-img {
+  align-items: center;
+  position: absolute;
+}
+
+#slideshow2 {
+  position: relative;
+}
+
+.slideshow-img2 {
+  align-items: center;
+  position: absolute;
+}
+
+#slideshow3 {
+  position: relative;
+}
+
+.slideshow-img3 {
+  align-items: center;
+  position: absolute;
+}
+
+#slideshow4 {
+  position: relative;
+}
+
+.slideshow-img4 {
+  align-items: center;
+  position: absolute;
+}
+
+#slideshow5 {
+  position: relative;
+}
+
+.slideshow-img5 {
+  align-items: center;
+  position: absolute;
+}
+
+#slideshow6 {
+  position: relative;
+}
+
+.slideshow-img6 {
+  align-items: center;
+  position: absolute;
+}
